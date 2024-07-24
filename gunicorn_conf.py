@@ -13,7 +13,8 @@ use_loglevel = os.getenv("LOG_LEVEL", "info")
 total_cores = psutil.cpu_count(logical=False)  # Physical cores
 available_cores = total_cores - psutil.cpu_count()  # Adjust for cores in use by other services
 
-half_physical_cores = max(available_cores // 2, 1),
+# half_physical_cores = max(available_cores // 2, 1),
+half_physical_cores = 1,
 
 workers_per_core = float(workers_per_core_str)
 default_web_concurrency = workers_per_core * half_physical_cores
