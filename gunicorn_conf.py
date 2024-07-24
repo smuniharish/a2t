@@ -34,7 +34,8 @@ keepalive_str = os.getenv("KEEP_ALIVE", "5")
 # Gunicorn configuration variables
 worker_class = "uvicorn.workers.UvicornWorker"
 loglevel = use_loglevel
-workers = web_concurrency
+workers = 1
+# workers = web_concurrency
 bind = bind_env or f"{host}:{port}"
 errorlog = errorlog_var or None
 worker_tmp_dir = "/tmp"
