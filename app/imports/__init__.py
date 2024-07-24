@@ -15,6 +15,7 @@ from typing import Any, Callable, TypeVar
 import time
 import json
 import multiprocessing
+from starlette.middleware.base import BaseHTTPMiddleware
 
 __all__ = [uvicorn]
 __all__ = [FastAPI,APIRouter,File,UploadFile,Form,HTTPException,Path,Request,Response]
@@ -33,3 +34,4 @@ __all__ = [Any,Callable,TypeVar]
 __all__ = [time]
 __all__ = [json]
 __all__ = [multiprocessing]
+__all__ = [BaseHTTPMiddleware]

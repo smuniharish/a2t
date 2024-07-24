@@ -1,5 +1,5 @@
-from imports import APIRouter,File,UploadFile
-from utilities.audio import transcribe_audio
+from app.imports import APIRouter,File,UploadFile
+from app.utilities.audio import transcribe_audio
 
 audio_router = APIRouter(prefix="/audio")
 

@@ -1,4 +1,4 @@
-from imports import BaseSettings
+from app.imports import BaseSettings
 
 class Settings(BaseSettings):
     logging_level:str = "INFO"

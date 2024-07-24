@@ -1,6 +1,6 @@
-from imports import FastAPI,uvicorn,CORSMiddleware
-from middlewares import ProcessTimeMiddleware
-from controllers import audio_router
+from app.imports import FastAPI,uvicorn,CORSMiddleware
+from app.middlewares import ProcessTimeMiddleware
+from app.controllers import audio_router
 
 
 app = FastAPI(
@@ -21,6 +21,6 @@ async def read_root():
     return {"message":"Server is up and running"}
 
 if __name__ == "__main__":
-    config = uvicorn.Config("main:app", port=3030, log_level="info",reload=True)
+    config = uvicorn.Config("app.main:app", port=3030, log_level="info",reload=True)
     server = uvicorn.Server(config)
     server.run()
