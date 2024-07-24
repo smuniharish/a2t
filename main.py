@@ -1,4 +1,4 @@
-from imports import FastAPI,uvicorn,CORSMiddleware
+from .imports import FastAPI,uvicorn,CORSMiddleware
 from app.middlewares import ProcessTimeMiddleware
 from app.controllers import audio_router
 
