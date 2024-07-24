@@ -13,8 +13,10 @@ use_loglevel = os.getenv("LOG_LEVEL", "info")
 total_cores = psutil.cpu_count(logical=False)  # Physical cores
 available_cores = total_cores - psutil.cpu_count()  # Adjust for cores in use by other services
 
+half_physical_cores = available_cores // 2,
+
 workers_per_core = float(workers_per_core_str)
-default_web_concurrency = workers_per_core * available_cores
+default_web_concurrency = workers_per_core * half_physical_cores
 
 if web_concurrency_str:
     web_concurrency = int(web_concurrency_str)
@@ -55,6 +57,7 @@ log_data = {
     "accesslog": accesslog,
     "workers_per_core": workers_per_core,
     "available_cores": available_cores,
+    "half_physical_cores": half_physical_cores,
     "total_cores": total_cores,
     "web_concurrency": web_concurrency,
     "host": host,
