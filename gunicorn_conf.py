@@ -16,7 +16,7 @@ available_cores = total_cores - psutil.cpu_count()  # Adjust for cores in use by
 half_physical_cores = max(available_cores // 2, 1),
 
 workers_per_core = float(workers_per_core_str)
-default_web_concurrency = workers_per_core * half_physical_cores
+default_web_concurrency = int(workers_per_core * half_physical_cores)
 
 if web_concurrency_str:
     web_concurrency = int(web_concurrency_str)
