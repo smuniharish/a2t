@@ -1,7 +1,7 @@
 from imports import time,Request,Any
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import Response
-from app.utilities.logger import logger
+from utilities.logger import logger
 class ProcessTimeMiddleware(BaseHTTPMiddleware):
     async def dispatch(self, request: Request, call_next):
         start_time = time.time()

@@ -1,5 +1,5 @@
 from imports import AutoModelForSpeechSeq2Seq,AutoProcessor,torch,is_torch_sdpa_available
-from app.utilities.logger import logger
+from utilities.logger import logger
 
 cudaIsAvailable = torch.cuda.is_available()
 spdaIsAvailable = is_torch_sdpa_available()

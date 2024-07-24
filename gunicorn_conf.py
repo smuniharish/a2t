@@ -1,4 +1,4 @@
-from imports import multiprocessing,json,os
+from app.imports import multiprocessing,json,os
 
 workers_per_core_str = os.getenv("WORKERS_PER_CORE", "1")
 max_workers_str = os.getenv("MAX_WORKERS", "10")
@@ -9,7 +9,7 @@ if max_workers_str:
 
 web_concurrency_str = os.getenv("WEB_CONCURRENCY", None)
 host = os.getenv("HOST", "0.0.0.0")
-port = os.getenv("PORT", "8000")
+port = os.getenv("PORT", "3030")
 bind_env = os.getenv("BIND", None)
 use_loglevel = os.getenv("LOG_LEVEL", "info")
 
