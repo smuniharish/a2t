@@ -10,3 +10,4 @@ black==24.4.2
 mypy==1.11.0
 pydantic-settings==2.3.4
 accelerate
+python-multipart

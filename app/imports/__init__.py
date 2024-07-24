@@ -16,6 +16,7 @@ import time
 import json
 import multiprocessing
 from starlette.middleware.base import BaseHTTPMiddleware
+import psutil
 
 __all__ = [uvicorn]
 __all__ = [FastAPI,APIRouter,File,UploadFile,Form,HTTPException,Path,Request,Response]
@@ -35,3 +36,4 @@ __all__ = [time]
 __all__ = [json]
 __all__ = [multiprocessing]
 __all__ = [BaseHTTPMiddleware]
+__all__ = [psutil]
