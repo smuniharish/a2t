@@ -32,7 +32,7 @@ timeout_str = os.getenv("TIMEOUT", "60")
 keepalive_str = os.getenv("KEEP_ALIVE", "5")
 
 # Gunicorn configuration variables
-worker_class = "gunicorn.workers.ggevent.GeventWorker"
+worker_class = "uvicorn.workers.UvicornWorker"
 loglevel = use_loglevel
 workers = web_concurrency
 bind = bind_env or f"{host}:{port}"
