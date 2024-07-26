@@ -3,7 +3,7 @@ from . import audio2Text_model,audio2Text_processor,audio2Text_torch_dtype,torch
 from app.utilities.logger import logger
 
 def transcribe_audio(audio_file):
-    with NamedTemporaryFile(delete=False,suffix=".wav") as temp_audio:
+    with NamedTemporaryFile(delete=False) as temp_audio:
         temp_audio.write(audio_file.file.read())
         temp_audio_path = temp_audio.name
     logger.info("Available backends {availableBackends}".format(availableBackends=torchaudio.list_audio_backends()))
